@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1; 
+}
+
+header {
+    background-color: #1d1f21;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #e64a19;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ccc;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-link.active,
+.menu-link:hover {
+    background-color: #e64a19;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.user-panel {
+    display: flex;
+    align-items: center;
+}
+
+.user-panel span {
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+#logout-button {
+    background-color: #e64a19;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logout-button:hover {
+    background-color: #b63b14;
+}
+
+.content-section {
+    display: none;
+    padding: 50px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.description-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#description p {
+    font-size: 1rem; 
+    line-height: 1.8; 
+    margin-top: 20px;
+}
+
+.dictionary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dictionary-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dictionary-list li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dictionary-list li:hover {
+    background-color: #e6f7ff;
+}
+
+.term-description {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.gallery-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery-btn {
+    background-color: #e64a19;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.gallery-btn:hover {
+    background-color: #b63b14;
+}
+
+#prev-slide {
+    left: 10px;
+}
+
+#next-slide {
+    right: 10px;
+}
+
+.gallery-images-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-image-slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.gallery-info {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.quiz-question {
+    margin-bottom: 15px;
+}
+
+.quiz-input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.quiz-submit-btn {
+    background-color: #e64a19;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quiz-submit-btn:hover {
+    background-color: #b63b14;
+}
+
+footer {
+    background-color: #1d1f21;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 3px solid #e64a19;
+    margin-top: auto; 
+}
+footer a {
+    color: #e64a19;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #b63b14;
+}
