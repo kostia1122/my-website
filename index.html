@@ -3,145 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>War Thunder</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>War Thunder - Авторизация</title>
+    <link rel="stylesheet" href="styles/auth.css">
 </head>
 <body>
-    <header id="header">
-        <div class="header-container container">
-            <img src="images/logo2.png" alt="War Thunder Logo" class="logo">
-            <nav>
-                <ul class="menu">
-                    <li><a href="#description" class="menu-link active">Описание</a></li>
-                    <li><a href="#dictionary" class="menu-link">Словарь</a></li>
-                    <li><a href="#gallery" class="menu-link">Галерея</a></li>
-                    <li><a href="#quiz" class="menu-link">Тест</a></li>
-                    <li><a href="#profile" class="menu-link">Личный кабинет</a></li>
-                </ul>
-            </nav>
-            <div class="user-panel">
-                <span id="user-login">Логин: Гость</span>
-                <button id="logout-button">Выйти</button>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="description" class="content-section active">
-            <h2>Описание</h2>
-            <p>War Thunder — это многопользовательская онлайн-игра в жанре боевых симуляторов, разработанная студией Gaijin Entertainment. Игра предоставляет игрокам возможность принять участие в масштабных сражениях на наземной, воздушной и морской технике, включая танки, самолеты и корабли, начиная с периода Второй мировой войны и заканчивая холодной войной.
-
-                Основные особенности игры:
-                
-                Многообразие техники: War Thunder включает сотни единиц техники различных стран, таких как США, СССР, Германия, Великобритания, Япония и другие. Каждая страна обладает уникальными моделями техники с реалистичными характеристиками.
-                
-                Реалистичный геймплей: Игра предлагает два основных режима — аркадный и реалистичный, где в последнем игроки сталкиваются с более сложными механиками и требованиями. В реальном режиме внимания требуют такие аспекты, как управление оружием, погоня за боеприпасами и повреждения техники.
-                
-                Графика и физика: Игра может похвастаться высококачественной графикой и физикой, которая помогает воссоздать настоящие боевые действия, включая разрушения объектов и повреждения техники.
-                
-                Масштабные сражения: Игроки участвуют в сражениях, которые могут охватывать до 32x32 игроков, создавая эпичные и динамичные битвы. Возможность взаимодействовать с союзниками и противниками делает игру стратегически глубокой.
-                
-                Историческая достоверность: War Thunder точно воспроизводит многие элементы военной техники и исторические события, что делает ее особенно привлекательной для любителей военной истории.
-                
-                Множество режимов: В игре есть разные типы боев: от массовых PvP-боев до кооперативных миссий и событий. Также имеется система кампаний, где игроки могут изучать различные исторические сражения.
-                
-                War Thunder привлекает как любителей аркадных боевых симуляторов, так и тех, кто ценит более сложные и реалистичные военные игры.</p>
-        </section>
-
-        <section id="dictionary" class="content-section">
-            <h2>Словарь</h2>
-            <input type="text" id="search-input" class="search-input" placeholder="Поиск по терминам...">
-            <ul id="dictionary-list" class="dictionary-list">
-                <li data-term="Ил-2">Ил-2</li>
-                <li data-term="Т-34">Т-34</li>
-                <li data-term="Шерман">Шерман</li>
-            </ul>
-            <div id="term-description" class="term-description"></div>
-        </section>
-
-        <section id="gallery" class="content-section">
-            <h2>Галерея</h2>
-            <div class="gallery-slider">
-                <button class="gallery-btn" id="prev-slide">Назад</button>
-                <img id="gallery-image" src="images/image1.jpg" alt="Слайд 1" class="gallery-image">
-                <p id="gallery-info" class="gallery-info">1 из 5</p>
-                <button class="gallery-btn" id="next-slide">Вперёд</button>
-            </div>
-        </section>
-        
-        <section id="quiz" class="content-section">
-            <h2>Тест</h2>
-            <div id="quiz-container">
-                <div class="quiz-question">
-                    <p>Вопрос 1: Как называется советский штурмовик?</p>
-                    <input type="text" class="quiz-input" data-answer="Ил-2" placeholder="Введите ответ...">
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 2: Какая страна создала танк Т-34?</p>
-                    <input type="text" class="quiz-input" data-answer="СССР" placeholder="Введите ответ...">
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 3: Как назывался самый мощный японский линкор?</p>
-                    <input type="text" class="quiz-input" data-answer="Ямато" placeholder="Введите ответ...">
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 4: К какой стране принадлежал танк 'Шерман'?</p>
-                    <input type="text" class="quiz-input" data-answer="США" placeholder="Введите ответ...">
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 5: Какой танк Германии называли 'Королевский тигр'?</p>
-                    <input type="text" class="quiz-input" data-answer="Королевский тигр" placeholder="Введите ответ...">
-                </div>
-                
-                <div class="quiz-question">
-                    <p>Вопрос 6: Какой немецкий истребитель использовался в войне?</p>
-                    <label><input type="radio" name="q6" value="Мессершмитт"> Мессершмитт</label>
-                    <label><input type="radio" name="q6" value="Спитфайр"> Спитфайр</label>
-                    <label><input type="radio" name="q6" value="Кобра"> Кобра</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 7: Какой самолет был основным у Германии?</p>
-                    <label><input type="radio" name="q7" value="Фокке-Вульф"> Фокке-Вульф</label>
-                    <label><input type="radio" name="q7" value="Ямато"> Ямато</label>
-                    <label><input type="radio" name="q7" value="Т-34"> Т-34</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 8: Как назывался немецкий тяжелый танк?</p>
-                    <label><input type="radio" name="q8" value="Тайгер"> Тайгер</label>
-                    <label><input type="radio" name="q8" value="Шерман"> Шерман</label>
-                    <label><input type="radio" name="q8" value="Ил-2"> Ил-2</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 9: Какой американский истребитель назывался 'Кобра'?</p>
-                    <label><input type="radio" name="q9" value="Кобра"> Кобра</label>
-                    <label><input type="radio" name="q9" value="Тайгер"> Тайгер</label>
-                    <label><input type="radio" name="q9" value="Фокке-Вульф"> Фокке-Вульф</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Вопрос 10: Какой танк был основным у СССР?</p>
-                    <label><input type="radio" name="q10" value="Т-34"> Т-34</label>
-                    <label><input type="radio" name="q10" value="Королевский тигр"> Королевский тигр</label>
-                    <label><input type="radio" name="q10" value="Ямато"> Ямато</label>
-                </div>
-            </div>
+    <div class="auth-container">
+        <form id="auth-form">
+            <h1>Добро пожаловать в War Thunder</h1>
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" placeholder="4-10 символов" required>
             
-            <p id="quiz-result"></p>
-        </section>
+            <label for="birthdate">Дата рождения:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Выберите...</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+            
+            <p id="error-message" class="error-message"></p>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
 
-        <section id="profile" class="content-section">
-            <h2>Личный кабинет</h2>
-            <p><strong>Логин:</strong> <span id="profile-login">Неизвестно</span></p>
-            <p><strong>Дата рождения:</strong> <span id="profile-birthdate">Неизвестно</span></p>
-            <p><strong>Пол:</strong> <span id="profile-gender">Неизвестно</span></p>
-            <p><strong>Последний результат теста:</strong> <span id="profile-test-result">Не проходился</span></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 War Thunder Fan-Site</p>
-        <p>Контакты: <a href="#">Телефон</a>, <a href="#">Соцсети</a></p>
-    </footer>
-
-    <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
 </body>
 </html>
