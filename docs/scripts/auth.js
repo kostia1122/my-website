@@ -26,5 +26,5 @@ document.getElementById('auth-form').addEventListener('submit', function (e) {
     localStorage.setItem('birthdate', birthdate);
     localStorage.setItem('gender', gender);
 
-    window.location.href = 'index.html';
+    window.location.href = 'index2.html';
 });

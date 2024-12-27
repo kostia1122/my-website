@@ -220,6 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     logoutButton.addEventListener("click", () => {
         localStorage.clear();
-        window.location.href = "auth.html";
+        window.location.href = "index.html";
     });
 });
